@@ -17,13 +17,16 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.4.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "nodemon": "^2.0.20"  // Nodemon for automatic restart during development
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node src/index.js",  // Start backend with Node.js
+    "dev": "nodemon src/index.js", // Start backend with Nodemon for development (auto-restarts on changes)
+    "build": "react-scripts build", // Build React frontend for production
+    "start:frontend": "react-scripts start", // Start React frontend development server
+    "test": "react-scripts test",  // Test React frontend
+    "eject": "react-scripts eject" // Eject React configuration if needed
   },
   "eslintConfig": {
     "extends": [
