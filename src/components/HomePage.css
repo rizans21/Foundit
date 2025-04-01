@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%; /* Increase container width for more space */
+  max-width: 1600px; /* Prevents boxes from getting too wide */
+  justify-content: center;
+  gap: 85px; /* Space between boxes */
+}
+
+.section {
+  flex: 1; /* Makes boxes equal width */
+  min-width: 300px; /* Minimum width */
+  height: 200px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding: 20px;
+}
+
+.section:hover {
+  background-color: #ddd;
+}
+
+/* Lost Section - Search Elements */
+#losers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#losers-text {
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+.search-container {
+  width: 95%;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #445;
+  border-radius: 5px;
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.search-instruction {
+  font-size: 11px;
+  color: #555;
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Active State (when hovering) */
+#losers.active #losers-text {
+  opacity: 0;
+}
+
+#losers.active .search-container,
+#losers.active .search-instruction {
+  opacity: 1;
+  visibility: visible;
+}
+
+.legal-links {
+  position: fixed; /* Keep it in place */
+  bottom: 15px; /* Distance from bottom */
+  right: 30px; /* Distance from right */
+  text-align: right;
+}
+
+.legal-links a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+  font-size: 12px;
+  font-weight:10px;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.cookie-consent button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cookie-consent button:hover {
+  background-color: #45a049;
+}
